@@ -5,9 +5,40 @@ An Grunt based application build kit for apps using Emberjs and Lesscss
 
 Incendiary-grunt-build-kit is the file structure Grunt config that I have put together for my own projects.
 
-## Files
+## Configuration Files
+
+### package.json - The project's npm configuration
+
+Make sure you update
+```
+"name": "my_project_name"
+"version": "0.0.0",
+```
+
+### bower.json - Bower configuration file.
+
+If you are unfamiliar with bower, have a look at [bower.io](http://bower.io/)
+
+New components can be added using:
+
+```
+bower install 'component_name' --save
+```
+or
+```
+bower install 'component_name' --save-dev
+```
+Be sure to update your project's info:
+
+```
+"name": "my-bower-configuration",//Change this to your project name
+"version": "0.0.1",//Change this to your current project version
+```
+
 
 #### Gruntfile.js - The file with the basic grunt configuration:
+
+If you are unfamiliar with grunt, have a look at [gruntjs.com](http://gruntjs.com/)
 
 Most of the config options can be edited:
 
@@ -63,22 +94,6 @@ var config = {
 ```
 ** Note the 'app' directory must be 'app', as it is hard coded in the template, and transpile tasks for now.
 
-### bower.json - Bower configuration file.
 
-If you are unfamiliar with bower, have a look at [bower.io](http://bower.io/)
-
-New components can be added using:
-```
-bower install 'component_name' --save
-```
-or
-```
-bower install 'component_name' --save-dev
-```
-
-Make sure to update you project's name and version
-
-```
-"name": "my-bower-configuration",//Change this to your project name
-"version": "0.0.1",//Change this to your current project version
-```
+### testem.json - Config for testem
+If you are unfamiliar with testem, have a look at [testem's github page](https://github.com/airportyh/testem)
