@@ -2,8 +2,8 @@ import Resolver from 'ember/resolver';
 //
 
 var App = Ember.Application.extend({
-	modulePrefix: 'clcm',
-	podModulePrefix: 'clcm/modules',
+	modulePrefix: 'pods',
+	podModulePrefix: 'pods/modules',
 	Resolver: Resolver['default'],
 
 	LOG_TRANSITIONS: true,
