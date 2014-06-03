@@ -136,7 +136,6 @@ var config = {
 	pkg: grunt.file.readJSON('package.json'),
 	env: process.env,
 	theme: 'default',//This will be used to set the folders for templates and less files
-	//modulePrefix: 'clcm',//The prefix that will be used by the module transpiler
 	/* The Ports that will be used to serve resulting builds */
 	ports: {
 		development: 9000,
@@ -157,7 +156,7 @@ var config = {
 		staging: './staging',//staging build output directory
 		production: './prod',//production build output directory
 		temporary: './tmp',//output directory for preprocessed files
-		ember_modules: 'clcm'//path to add to ember modules in the es6 transpiler (for ember resolver)
+		ember_modules: 'mods'//path to add to ember modules in the es6 transpiler (for ember resolver)
 	},
 	vendorLibs: {
 		development: [
