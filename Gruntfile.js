@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 			staging: './staging',//staging build output directory
 			production: './prod',//production build output directory
 			temporary: './tmp',//output directory for preprocessed files
-			ember_modules: 'mods',//path to add to ember modules in the es6 transpiler (for ember resolver)
+			ember_modules: 'pods',//path to add to ember modules in the es6 transpiler (for ember resolver)
 			images: 'img'
 		},
 		vendorLibs: {
