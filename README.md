@@ -17,7 +17,33 @@ Edit the package.json, bower.json, and Gruntfile.js with your project details (s
 npm install
 ```
 
-#File Structure
+## Grunt task usage
+
+Local Development:
+
+Running grunt will build a developer version of the project and serve it from builds/[themeName]/dev/
+
+*- Unless configured the themeName will be 'default' so the output directory would be builds/default/dev/-*
+```
+grunt
+```
+
+To build a different theme set the theme flag to the theme the you would like to build
+```
+grunt --theme=new_theme
+```
+
+To output a version built for your staging server
+```
+grunt staging
+```
+
+To output a version built for your production server
+```
+grunt production
+```
+
+##File Structure
 
 ### app/
 
