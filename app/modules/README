@@ -1,0 +1,30 @@
+Ember modules
+[http://emberjs.com/blog/2013/12/17/whats-coming-in-ember-in-2014.html](http://emberjs.com/blog/2013/12/17/whats-coming-in-ember-in-2014.html)
+
+* see "POD" DIRECTORY STRUCTURE *
+
+eg: 
+
+app/
+  config/
+    application.js
+  serializers/
+  models/
+    post.js
+    user.js
+  mixins/
+pods/
+  post/
+    controller.js
+    template.handlebars
+  posts/
+    controller.js
+    template.handlebars
+  index/
+    controller.js
+    template.handlebars
+components/
+  google-map/
+    component.handlebars
+    component.js
+    component.css

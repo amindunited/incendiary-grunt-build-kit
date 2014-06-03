@@ -1,0 +1,6 @@
+Handlebars Templates
+[http://handlebarsjs.com/](http://handlebarsjs.com/)
+
+
+Within each 'theme' directory Handlebars files should be structured in folders and named as they would be referanced in your app.
+

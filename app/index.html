@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+        <title><!-- @echo name --> - Development Edition</title>
+		<!-- @endif -->
+
+		<!-- @if NODE_ENV == 'STAGING' -->
+        <title><!-- @echo name --> -  Staging Edition</title>
+		<!-- @endif -->
+		
+		<!-- @if NODE_ENV == 'PRODUCTION' -->
+        <title><!-- @echo name --></title>
+		<!-- @endif -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <!--SOF STYLESHEETS -->
+        <link rel="stylesheet" href="css/index.css">
+        <!--EOF STYLESHEETS -->
+
+        <!--SOF Head JS -->
+        	<!-- If Modrnizr is required uncomment-->
+        <!--
+        <script src="js/vendor/modernizr-2.8.0.min.js"></script>
+        -->
+        <!--EOF Head JS -->
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- ADD QUNIT FOR TESTING -->
+
+        <!-- @if testVersion == 'true' -->
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <!-- @endif -->
+        
+
+        <!-- SOF Application Body Content-->
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- EOF Application Body Content-->
+
+
+        <!--SOF Application JS -->
+
+        <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+        <script src="js/app.js"></script>
+        <script src="//localhost:9008/livereload.js"></script>
+        <!-- @endif -->
+
+
+        <!-- @if NODE_ENV == 'STAGING' -->
+        <script src="js/app.min.js"></script>
+        <!-- @endif -->
+
+        <!-- @if NODE_ENV == 'PRODUCTION' -->
+        <script src="js/app.min.js"></script>
+        <!-- @endif -->
+
+        <!-- @if testVersion == 'true' -->
+        <script src="/testem.js"></script>
+        <!-- @endif -->
+
+        <script>
+            window.App = require('clcm/app')["default"].create();
+        </script>
+		<!--EOF Application JS -->
+
+		
+		<!--SOF Analytics -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        -->
+        <!-- EOF Analytics -->
+
+    </body>
+</html>

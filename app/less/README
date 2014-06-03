@@ -1,0 +1,6 @@
+Lesscss
+[http://lesscss.org/](http://lesscss.org/)
+
+style.less is the file that the sites styles are build from
+
+All required less files for each theme should be under that theme's directory
