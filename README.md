@@ -5,6 +5,66 @@ An Grunt based application build kit for apps using Emberjs and Lesscss
 
 Incendiary-grunt-build-kit is the file structure Grunt config that I have put together for my own projects.
 
+## Getting Started
+```
+git clone https://github.com/amindunited/incendiary-grunt-build-kit.git
+cd incendiary-grunt-build-kit/
+```
+
+Edit the package.json, bower.json, and Gruntfile.js with your project details (see 'Configuration Files' below), then
+
+```
+npm install
+```
+
+#File Structure
+
+### app/
+
+Most of your application's files will be in app/
+
+Almost all of the files and folders under app/ will be transpiled using the es6 module transpiler, and as such should be written as es6 modules.
+
+There are some exceptions though:
+
+app/index.html - This is the html for the project it's full of templates for environment specific code
+app/less - .less files
+app/templates/ - handlebars templates
+
+Also if you configure your Gruntfile so that your environmental_configuration files are in a directory in 'app/',  that directory will be skipped by the transpiler.
+The same applies to your bower_components or 'vendorLibs' in the Gruntfile.
+
+#### Application file structure
+In app/
+```
+adapters/
+assets/
+components/
+helpers/
+initializers/
+less/
+modules/
+	module_name/
+		model.js
+		view.js
+		controller.js
+		route.js
+		module_child_name/
+			model.js
+			view.js
+			controller.js
+			route.js
+mixins/
+templates/
+utils/
+models/
+views/
+controllers/
+routes/
+
+```
+
+
 ## Configuration Files
 
 ### package.json - The project's npm configuration
