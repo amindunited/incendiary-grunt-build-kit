@@ -8,7 +8,8 @@ module.exports = function(grunt) {
 		'less:development',
 		'emberhandlebars',
 		'concat_sourcemap:development',
-		/*'clean:temp',*/
+		'copy:images_development',
+		'clean:temp',
 		'concurrent:development'
 		]
 	);

@@ -10,6 +10,7 @@ module.exports = function(grunt) {
 		'emberhandlebars',
 		'preprocess:test',
 		'concat_sourcemap:test',
+		'copy:images_development',
 		'testem',
 		'clean:temp'
 		]

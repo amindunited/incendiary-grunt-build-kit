@@ -1,24 +1,20 @@
 module.exports = {
-	images: {
+	images_development: {
 		expand: true, 
 		src: ['**'], 
-		dest: 'images/',
-		cwd: 'app/src/images/'
+		dest: '<%= paths.outputDir %>/<%= theme %>/<%= paths.development %>/<%= paths.images %>',
+		cwd: '<%= paths.source %>/<%= paths.images %>/'
 	},
-	deploy: {
-		expand: true,
-		files: [ 
-			{
-				src: ['app/**', 'js/**', 'images/**', 'css/**'], 
-				dest: 'deploy/'
-			},
-			{
-				expand: true, 
-				flatten: true, 
-				src: ['app/index.php'],
-				dest: 'deploy/'
-			}
-
-		]
+	images_staging: {
+		expand: true, 
+		src: ['**'], 
+		dest: '<%= paths.outputDir %>/<%= theme %>/<%= paths.staging %>/<%= paths.images %>',
+		cwd: '<%= paths.source %>/<%= paths.images %>/'
+	},
+	images_production: {
+		expand: true, 
+		src: ['**'], 
+		dest: '<%= paths.outputDir %>/<%= theme %>/<%= paths.production %>/<%= paths.images %>',
+		cwd: '<%= paths.source %>/<%= paths.images %>/'
 	}
 }

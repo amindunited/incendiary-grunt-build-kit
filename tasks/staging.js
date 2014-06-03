@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		'jshint',
 		'less:staging',
 		'emberhandlebars',
-		//'concat_sourcemap:staging',
+		'copy:images_staging',
 		'uglify:staging',
 		'clean:temp',
 		'concurrent:staging'

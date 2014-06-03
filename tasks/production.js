@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 		'transpile:app',
 		'jshint',
 		'less:production',
+		'copy:images_production',
 		'emberhandlebars',
 		'clean:temp'
 	])
