@@ -28,10 +28,13 @@ Almost all of the files and folders under app/ will be transpiled using the es6 
 There are some exceptions though:
 
 app/index.html - This is the html for the project it's full of templates for environment specific code
+
 app/less - .less files
+
 app/templates/ - handlebars templates
 
 Also if you configure your Gruntfile so that your environmental_configuration files are in a directory in 'app/',  that directory will be skipped by the transpiler.
+
 The same applies to your bower_components or 'vendorLibs' in the Gruntfile.
 
 #### Application file structure
