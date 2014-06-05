@@ -12,7 +12,7 @@ module.exports = {
 			outputSourceFiles: true
 		},
 		files: {
-			"<%= paths.outputDir %>/<%= theme %>/<%= paths.development %>/css/index.css": [vendor_css, "<%= paths.source %>/less/style.less"]
+			"<%= paths.outputDir %>/<%= theme %>/<%= paths.development %>/css/index.css": [vendor_css, "<%= paths.source %>/less/<%= theme %>/style.less"]
 		}
 	},
 	test: {
@@ -25,7 +25,7 @@ module.exports = {
 			outputSourceFiles: true
 		},
 		files: {
-			"<%= paths.temporary %>/tests/css/index.css": [vendor_css, tests_css, "<%= paths.source %>/less/style.less"]
+			"<%= paths.temporary %>/tests/css/index.css": [vendor_css, tests_css, "<%= paths.source %>/less/<%= theme %>/style.less"]
 		}
 	},
 	staging: {
@@ -39,7 +39,7 @@ module.exports = {
 			compress: true
 		},
 		files: {
-			"<%= paths.outputDir %>/<%= theme %>/<%= paths.staging %>/css/index.css": [vendor_css, "<%= paths.source %>/less/style.less"]
+			"<%= paths.outputDir %>/<%= theme %>/<%= paths.staging %>/css/index.css": [vendor_css, "<%= paths.source %>/less/<%= theme %>/style.less"]
 		}
 	},
 	production: {
@@ -53,7 +53,7 @@ module.exports = {
 			compress: true
 		},
 		files: {
-			"<%= paths.outputDir %>/<%= theme %>/<%= paths.production %>/css/index.css": [vendor_css, "<%= paths.source %>/less/style.less"]
+			"<%= paths.outputDir %>/<%= theme %>/<%= paths.production %>/css/index.css": [vendor_css, "<%= paths.source %>/less/<%= theme %>/style.less"]
 		}
 	}
 }
