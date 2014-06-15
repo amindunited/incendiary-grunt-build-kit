@@ -8,6 +8,7 @@
     "ember-model": "git://github.com/ebryn/ember-model.git#0.0.11"
   },
   "devDependencies": {
-    "qunit": "~1.14.0"
+    "qunit": "~1.14.0",
+    "ember-animate": "~0.3.3"
   }
 }

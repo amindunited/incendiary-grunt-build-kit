@@ -7,7 +7,7 @@ module.exports = {
 	},
 
 	test: {
-		tasks: ['connect:development', 'open:development', 'watch', 'testem'],
+		tasks: ['connect:testing', 'open:testing', 'watch', 'testem'],
 		options: {
 			logConcurrentOutput: true
 		}

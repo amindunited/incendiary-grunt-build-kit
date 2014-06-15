@@ -7,8 +7,7 @@ module.exports = {
 			'<%= paths.outputDir %>/<%= theme %>/<%= paths.development %>/js/app.js': [
 				'<%= vendorLibs.development %>',
 				'<%= environmental_configuration.development %>',
-				'./lib/loader.js',
-				'./lib/ember-resolver.js',
+				'<%= libs.development %>',
 				'<%= emberhandlebars.compile.dest %>',
 				'<%= paths.temporary %>/transpiled/**/*.js',
 				'!<%= paths.temporary %>/transpiled/tests/**/*.js'
@@ -24,12 +23,12 @@ module.exports = {
 			'<%= paths.temporary %>/tests/js/app.js': [
 				'<%= vendorLibs.development %>',
 			    '<%= environmental_configuration.development %>',
-				'./lib/loader.js',
-				'./lib/ember-resolver.js',
+				'<%= libs.development %>',
 				'<%= emberhandlebars.compile.dest %>',
-				'<%= paths.temporary %>/transpiled/**/*.js',
-				'./bower_components/qunit/qunit/qunit.js',
-				'./lib/test-loader.js'
+				'<%= paths.temporary %>/transpiled/**/*.js'
+			],
+			'<%= paths.temporary %>/tests/js/tests.js': [
+				'<%=libs.testing %>'
 			]
 		},
 	},
@@ -40,10 +39,24 @@ module.exports = {
 		},
 		files: {
 			'<%= paths.outputDir %>/<%= theme %>/<%= paths.staging %>/js/app.js': [
-				'<%= vendorLibs.production %>',
+				'<%= vendorLibs.staging %>',
 			    '<%= environmental_configuration.staging %>',
-				'./lib/loader.js',
-				'./lib/ember-resolver.js',
+				'<%= libs.staging %>',
+				'<%= emberhandlebars.compile.dest %>',
+				'<%= paths.temporary %>/transpiled/**/*.js',
+				'!<%= paths.temporary %>/transpiled/tests/**/*.js'
+			]
+		},
+	},
+	production: {
+		options: {
+			sourcesContent: true
+		},
+		files: {
+			'<%= paths.outputDir %>/<%= theme %>/<%= paths.production %>/js/app.js': [
+				'<%= vendorLibs.production %>',
+			    '<%= environmental_configuration.production %>',
+				'<%= libs.production %>',
 				'<%= emberhandlebars.compile.dest %>',
 				'<%= paths.temporary %>/transpiled/**/*.js',
 				'!<%= paths.temporary %>/transpiled/tests/**/*.js'

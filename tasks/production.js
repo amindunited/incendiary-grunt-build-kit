@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+
 	grunt.registerTask('production', [
 		'clean:build',
 		'env:production', 
@@ -6,8 +7,8 @@ module.exports = function(grunt) {
 		'transpile:app',
 		'jshint',
 		'less:production',
-		'copy:images_production',
+		'copy:assets_production',
 		'emberhandlebars',
 		'clean:temp'
-	])
+	]);
 }

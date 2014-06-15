@@ -8,6 +8,15 @@ module.exports = {
 	  	keepalive: true
 	  }
 	},
+	
+	testing: {
+	  options: {
+		port: '<%= ports.testing %>',
+	  	hostname: '127.0.0.1', // Remove this line if you only want the server available locally
+	  	base: '<%= paths.temporary %>/tests',
+	  	keepalive: true
+	  }
+	},
 
 	staging: {
 	  options: {
@@ -25,25 +34,5 @@ module.exports = {
 	  	base: '<%= paths.outputDir %>/<%= theme %>/production',
 	  	keepalive: true
 	  }
-	},
-/*
-	server: {
-		options: {
-			port: 9000,
-			hostname: '*', // Remove this line if you only want the server available locally
-			base: 'development',
-			keepalive: true,
-			/*
-			middleware: function(connect, options) {
-				return [
-					require('connect-livereload')({
-						port: config.watch.public.options.livereload
-					}),
-					connect.static(options.base)
-				];
-			}
-			* /
-		}
-	},
-*/
+	}
 }

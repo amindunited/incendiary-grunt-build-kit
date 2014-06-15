@@ -21,7 +21,7 @@ module.exports = {
     test : {
 
         src : '<%= paths.source %>/index.html',
-        dest : '<%= paths.temporary %>/tests/tests.html',
+        dest : '<%= paths.temporary %>/tests/index.html',
         options : {
 
             context : {

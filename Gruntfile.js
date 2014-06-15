@@ -21,12 +21,15 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		env: process.env,
 		theme: 'default',//This will be used to set the folders for templates and less files
-		//modulePrefix: 'clcm',//The prefix that will be used by the module transpiler
+		testem_results: 'testem_results.js',//The file that thfe test results will be written to
+		serve: true,//Set this to false to prevent server from running, and browser being opened
+
 		/* The Ports that will be used to serve resulting builds */
 		ports: {
 			development: 9000,
 			staging: 9001,
-			production: 9002
+			production: 9002,
+			testing: 9003
 		},
 		/* Location of Build specific configuration files */
 		environmental_configuration: {
@@ -42,34 +45,71 @@ module.exports = function(grunt) {
 			staging: './staging',//staging build output directory
 			production: './prod',//production build output directory
 			temporary: './tmp',//output directory for preprocessed files
+			documentation: 'docs',//output directory for documentation
 			ember_modules: 'pods',//path to add to ember modules in the es6 transpiler (for ember resolver)
-			images: 'img'
+			images: 'img',
+			assets: 'assets'//Folder that contains images / fonts etc...
 		},
+		//Additional style sheets to prepend to lesscss' output
+		// ** NOTE any *.css files under your application directory will be automatically added
+		stylesheets: {
+			common:[],
+			test: ['./bower_components/qunit/qunit/qunit.css']
+		},
+		//Additional libraries for concatination (not processed as es6)
+		libs: {
+			development:[
+				'./lib/loader.js',
+				'./lib/ember-resolver.js',
+				'./lib/animation-helpers.js'
+			],
+			staging:[
+				'./lib/loader.js',
+				'./lib/ember-resolver.js',
+				'./lib/animation-helpers.js'
+			],
+			production:[
+				'./lib/loader.js',
+				'./lib/ember-resolver.js',
+				'./lib/animation-helpers.js'
+			],
+			testing: [
+				'./bower_components/qunit/qunit/qunit.js',
+				'./lib/test-helpers.js',
+				'./lib/test-loader.js'
+			]//NOTE testing will also load the development libs
+		},
+		//The Bower Libraries for use with each build (not processed as es6)
 		vendorLibs: {
 			development: [
 				'./bower_components/jquery/jquery.js',
 				'./bower_components/handlebars/handlebars.js',
 				'./bower_components/ember/ember.js',
-				'./bower_components/ember-model/ember-model.js'
+				'./bower_components/ember-model/ember-model.js',
+				'./bower_components/ember-animate/ember-animate.js'
 			],
 			staging: [
 				'./bower_components/jquery/jquery.min.js',
 				'./bower_components/handlebars/handlebars.min.js',
 				'./bower_components/ember/ember.min.js',
-				'./bower_components/ember-model/ember-model.js'
+				'./bower_components/ember-model/ember-model.js',
+				'./bower_components/ember-animate/ember-animate.js'
 			],
 			production: [
 				'./bower_components/jquery/jquery.min.js',
 				'./bower_components/handlebars/handlebars.min.js',
 				'./bower_components/ember/ember.prod.js',
-				'./bower_components/ember-model/ember-model.js'
+				'./bower_components/ember-model/ember-model.js',
+				'./bower_components/ember-animate/ember-animate.js'
 			],
 		}
 	};
 
 	//Override default theme in config, if one was passed
 	config.theme = grunt.option('theme') || 'default';
-	//env['theme'] = grunt.option('theme') || 'default';
+
+	//Override the serve option if flag is passed
+	config.serve = grunt.option('serve') || config.serve;
 
 	/*
 	 * Loads the individual config files,

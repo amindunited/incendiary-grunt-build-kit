@@ -1,6 +1,6 @@
 {
     "framework": "qunit",
-    "test_page": "tmp/tests/tests.html",
+    "test_page": "tmp/tests/index.html",
     "debug": true,
     "launch_in_dev": ["PhantomJS"],
     "launch_in_ci": ["PhantomJS"]

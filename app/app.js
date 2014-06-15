@@ -1,3 +1,10 @@
+/**
+ * The Core Application class
+ *
+ * @class App
+ * @constructor
+ */
+
 import Resolver from 'ember/resolver';
 //
 

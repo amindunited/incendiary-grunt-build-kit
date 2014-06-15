@@ -1,16 +1,33 @@
 module.exports = function(grunt) {
-	grunt.registerTask('staging', [
-		'clean:build',
-		'env:staging', 
+
+	var tasks = [
+		'test_runner',
+		'copy:test_results_staging',
+		'env:staging',
 		'preprocess:staging', 
 		'transpile:app',
 		'jshint',
 		'less:staging',
 		'emberhandlebars',
-		'copy:images_staging',
+		'copy:assets_staging',
 		'uglify:staging',
-		'clean:temp',
-		'concurrent:staging'
-		]
-	);
+		'yuidoc'
+	];
+
+	//Append 'server' tasks if serve=true
+	if (!grunt.config.data.serve) {
+
+		console.log("|--------------------------------|");
+		console.log("|------------NO SERVER!----------|");
+		console.log("|--------------------------------|");
+
+	} else {
+
+		tasks.push('concurrent:staging');
+		
+	}
+
+
+
+	grunt.registerTask('staging', tasks);
 }
