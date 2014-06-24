@@ -3,7 +3,7 @@ module.exports = {
 	development: {
 	  options: {
 		port: '<%= ports.development %>',
-	  	hostname: '127.0.0.1', // Remove this line if you only want the server available locally
+	  	hostname: '<%= server_hostname %>',
 	  	base: '<%= paths.outputDir %>/<%= theme %>/dev',
 	  	keepalive: true
 	  }
@@ -12,7 +12,7 @@ module.exports = {
 	testing: {
 	  options: {
 		port: '<%= ports.testing %>',
-	  	hostname: '127.0.0.1', // Remove this line if you only want the server available locally
+	  	hostname: '<%= server_hostname %>',
 	  	base: '<%= paths.temporary %>/tests',
 	  	keepalive: true
 	  }
@@ -21,7 +21,7 @@ module.exports = {
 	staging: {
 	  options: {
 		port: '<%= ports.staging %>',
-	  	hostname: '127.0.0.1', // Remove this line if you only want the server available locally
+	  	hostname: '<%= server_hostname %>',
 	  	base: '<%= paths.outputDir %>/<%= theme %>/staging',
 	  	keepalive: true
 	  }
@@ -30,7 +30,7 @@ module.exports = {
 	production: {
 	  options: {
 		port: '<%= ports.production %>',
-	  	hostname: '127.0.0.1', // Remove this line if you only want the server available locally
+	  	hostname: '<%= server_hostname %>',
 	  	base: '<%= paths.outputDir %>/<%= theme %>/production',
 	  	keepalive: true
 	  }

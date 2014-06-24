@@ -5,15 +5,27 @@ module.exports = {
 			logConcurrentOutput: true
 		}
 	},
+	development_no_open: {
+		tasks: ['connect:development', 'watch'],
+		options: {
+			logConcurrentOutput: true
+		}
+	},
+	development_no_watch: {
+		tasks: ['connect:development'],
+		options: {
+			logConcurrentOutput: true
+		}
+	},
 
 	test: {
-		tasks: ['connect:testing', 'open:testing', 'watch', 'testem'],
+		tasks: ['connect:testing', 'watch', 'testem'],
 		options: {
 			logConcurrentOutput: true
 		}
 	},
 	staging: {
-		tasks: ['connect:staging', 'open:staging'],
+		tasks: ['connect:staging'],
 		options: {
 			logConcurrentOutput: true
 		}

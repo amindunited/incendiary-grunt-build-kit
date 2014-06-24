@@ -23,7 +23,9 @@ module.exports = function(grunt) {
 		theme: 'default',//This will be used to set the folders for templates and less files
 		testem_results: 'testem_results.js',//The file that thfe test results will be written to
 		serve: true,//Set this to false to prevent server from running, and browser being opened
-
+		server_hostname: '127.0.0.1', // Setting it to '*' will make the server accessible from anywhere.
+		auto_open: true,// set to false to prevent grunt tasks from launching browser (will not run when serve=false)
+		watch: true,// set to false to prevent watch rebuild script running (will not run when serve=false)
 		/* The Ports that will be used to serve resulting builds */
 		ports: {
 			development: 9000,

@@ -20,8 +20,20 @@ module.exports = function(grunt) {
 		console.log("|--------------------------------|");
 
 	} else {
-
-		tasks.push('concurrent:development');
+		
+		if (grunt.config.data.auto_open && grunt.config.data.watch) {
+			
+			tasks.push('concurrent:development');
+		
+		} else if (!grunt.config.data.auto_open && grunt.config.data.watch) {
+		
+			tasks.push('concurrent:development_no_open');
+		
+		} else {
+		
+			tasks.push('concurrent:development_no_watch');
+		
+		}
 		
 	}
 
