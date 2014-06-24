@@ -105,11 +105,6 @@ module.exports = function(grunt) {
 		}
 	};
 
-	//Override default theme in config, if one was passed
-	config.theme = grunt.option('theme') || 'default';
-
-	//Override the serve option if flag is passed
-	config.serve = grunt.option('serve') || config.serve;
 
 	/*
 	 * Loads the individual config files,
@@ -128,6 +123,18 @@ module.exports = function(grunt) {
 		return object;
 	}
 
+	/* 
+	 * Extend config
+	 * Merge the config object (above) with the project specific config
+	 */
+	grunt.util._.extend(config, grunt.file.readJSON('project.config.json'));
+
+
+	/* 
+	 * Extend config
+	 * Merge the config object (above) with the local config
+	 */
+	grunt.util._.extend(config, grunt.file.readJSON('local.config.json'));
 
 	/* 
 	 * Extend config
@@ -135,6 +142,13 @@ module.exports = function(grunt) {
 	 * of the loadConfig function (also above)
 	 */
 	grunt.util._.extend(config, loadConfig('./tasks/options/'));
+
+
+	//Override default theme in config, if one was passed
+	config.theme = grunt.option('theme') || 'default';
+
+	//Override the serve option if flag is passed
+	config.serve = grunt.option('serve') || config.serve;
 
 	/*
 	 * Standard initConfig

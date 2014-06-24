@@ -5,7 +5,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "bower install"
+    "postinstall": "node postInstall.js"
   },
   "author": "amindunited",
   "license": "ISC",
@@ -37,6 +37,7 @@
     "clean-css": "^2.1.8"
   },
   "dependencies": {
-    "grunt-contrib-yuidoc": "^0.5.2"
+    "grunt-contrib-yuidoc": "^0.5.2",
+    "prompt": "^0.2.13"
   }
 }
