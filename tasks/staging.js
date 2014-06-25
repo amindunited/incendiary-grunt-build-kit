@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
 	var tasks = [
+		'copy:templates',
 		'test_runner',
 		'copy:test_results_staging',
 		'env:staging',

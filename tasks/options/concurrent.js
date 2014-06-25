@@ -1,6 +1,6 @@
 module.exports = {
 	development: {
-		tasks: ['connect:development', 'open:development', 'watch'],
+		tasks: ['connect:development', 'test', 'yuidoc:development', 'open:development', 'watch'],
 		options: {
 			logConcurrentOutput: true
 		}
@@ -18,6 +18,8 @@ module.exports = {
 		}
 	},
 
+	/* Currently un used */
+	/*
 	test: {
 		tasks: ['connect:testing', 'watch', 'testem'],
 		options: {
@@ -30,4 +32,5 @@ module.exports = {
 			logConcurrentOutput: true
 		}
 	},
+	*/
 }

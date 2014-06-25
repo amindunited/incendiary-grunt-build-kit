@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 	grunt.registerTask('test', [
-		//'clean:build',
 		'env:development',
+		'copy:templates',
 		'preprocess:development',
 		'transpile:app',
 		'transpile:tests',
@@ -11,9 +11,7 @@ module.exports = function(grunt) {
 		'preprocess:test',
 		'concat_sourcemap:test',
 		'copy:assets_development',
-		'concurrent:test',
-		//'testem',
-		'clean:temp'
+		'copy:test_results_development'
 		]
 	);
 }

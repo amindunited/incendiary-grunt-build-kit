@@ -2,52 +2,39 @@ module.exports =  {
 
     options: {
     	livereload: {
-        	port: 9008
+        	port: '<%= ports.live_reload %>'
     	}
     },
 
 	hbs: {
 		files: ['<%= paths.source %>/**/*.hbs'],
-		tasks: ['clean:build',
-			'env:development', 
-			'preprocess:development', 
-			'transpile:app',
-			'jshint',
-			'less:development',
+		tasks: [
+			'copy:templates',
 			'emberhandlebars',
-			'concat_sourcemap:development',
-			'copy:images_development',
-			'clean:temp'
+			'concat_sourcemap:development'
 		]
 	},
 
 	js: {
 		files: ['<%= paths.source %>/**/*.js', '!<%= paths.source %>/vendor/**/*.js'],
-		tasks: ['clean:build',
-			'env:development', 
-			'preprocess:development', 
+		tasks: [
 			'transpile:app',
 			'jshint',
-			'less:development',
-			'emberhandlebars',
-			'concat_sourcemap:development',
-			'copy:images_development',
-			'clean:temp'
+			'concat_sourcemap:development'
 		]
 	},
 	
 	less: {
-		files: 'app/less/**/*.less',
-		tasks: ['clean:build',
-			'env:development', 
-			'preprocess:development', 
-			'transpile:app',
-			'jshint',
-			'less:development',
-			'emberhandlebars',
-			'concat_sourcemap:development',
-			'copy:images_development',
-			'clean:temp'
+		files: ['<%= paths.source %>/less/**/*.less', '<%= paths.source %>/**/*.css'],
+		tasks: [
+			'less:development'
+		]
+	},
+
+	html: {
+		files: '<%= paths.source %>/**/*.html',
+		tasks: [
+			'preprocess:development'
 		]
 	}
 

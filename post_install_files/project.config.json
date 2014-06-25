@@ -5,7 +5,8 @@
 		"development": "9000",
 		"staging": "9001",
 		"production": "9002",
-		"testing": "9003"
+		"testing": "9003",
+		"live_reload": "9008"
 	},
 	"environmental_configuration": {
 		"development": "./config/dev/dev.js",

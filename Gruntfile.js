@@ -16,6 +16,12 @@ module.exports = function(grunt) {
 
 	/*
 	 * Basic config object
+	 * 
+	 * NOTE: Do Not edit these options here...
+	 * 		edits that your team would like, project wide can be overridden in project.config.json 
+	 * 		edits that you would like, locally can be overridden in local.config.json
+	 *		
+	 *		** if you are overriding a nested object or array, be sure to override that whole object
 	 */
 	var config = {
 		pkg: grunt.file.readJSON('package.json'),
@@ -31,7 +37,8 @@ module.exports = function(grunt) {
 			development: 9000,
 			staging: 9001,
 			production: 9002,
-			testing: 9003
+			testing: 9003,
+			live_reload: 9008
 		},
 		/* Location of Build specific configuration files */
 		environmental_configuration: {
@@ -144,6 +151,11 @@ module.exports = function(grunt) {
 	 * of the loadConfig function (also above)
 	 */
 	grunt.util._.extend(config, loadConfig('./tasks/options/'));
+
+	/*
+	 *	Create the script tag that 'preprocess' will use to add the live reload script to the html 
+	 */
+	process.env.live_reload_script = '<script src="//localhost:'+config.ports.live_reload+'/livereload.js"></script>';
 
 
 	//Override default theme in config, if one was passed

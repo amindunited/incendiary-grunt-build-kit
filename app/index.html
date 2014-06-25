@@ -40,8 +40,12 @@
         <!-- ADD QUNIT FOR TESTING -->
 
         <!-- @if testVersion == 'true' -->
-        <div id="qunit"></div>
-        <div id="qunit-fixture"></div>
+
+        <div id="testsTab">
+            <div id="qunit"></div>
+            <div id="qunit-fixture"></div>
+            <div id="ember-testing"></div>
+        </div>
         <!-- @endif -->
         
 
@@ -86,7 +90,12 @@
         </script>
 		<!--EOF Application JS -->
 
-		
+		<!-- @if testVersion == 'true' -->
+        
+        <script src="js/tests.js"></script>
+        <script src="/testem.js"></script>
+        <!-- @endif --> 
+        
 		<!--SOF Analytics -->
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--

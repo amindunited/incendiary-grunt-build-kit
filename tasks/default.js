@@ -1,7 +1,8 @@
 module.exports = function(grunt) {
 	var tasks = [
-		'clean:build',
-		'env:development', 
+		'clean:temp',
+		'env:development',
+		'copy:templates',
 		'preprocess:development', 
 		'transpile:app',
 		'jshint',
@@ -9,7 +10,6 @@ module.exports = function(grunt) {
 		'emberhandlebars',
 		'concat_sourcemap:development',
 		'copy:assets_development',
-		'clean:temp'
 	];
 
 	//Append 'server' tasks if serve=true
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 		console.log("|--------------------------------|");
 
 	} else {
-		
+
 		if (grunt.config.data.auto_open && grunt.config.data.watch) {
 			
 			tasks.push('concurrent:development');
