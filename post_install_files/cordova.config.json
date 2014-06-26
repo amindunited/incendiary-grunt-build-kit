@@ -1,0 +1,90 @@
+{
+    "enable": true,
+    "plugins": [
+        { 
+            "name": "battery-status",
+            "registry": "org.apache.cordova.battery-status",
+            "add": true 
+        },
+        { 
+            "name": "camera",
+            "registry": "org.apache.cordova.camera", 
+            "add": true 
+        },
+        { 
+            "name": "console",
+            "registry": "org.apache.cordova.console", 
+            "add": true
+        },
+        { 
+            "name": "contacts",
+            "registry": "org.apache.cordova.contacts", 
+            "add": true 
+        },
+        { 
+            "name": "device",
+            "registry": "org.apache.cordova.device",
+            "add": true 
+        },
+        { 
+            "name": "device-motion", 
+            "registry": "org.apache.cordova.device-motion",
+            "add": true 
+        },
+        { 
+            "name": "device-orientation", 
+            "registry": "org.apache.cordova.device-orientation",
+            "add": true 
+        },
+        { 
+            "name": "dialogs", 
+            "registry": "org.apache.cordova.dialogs",
+            "add": true 
+        },
+        { 
+            "name": "file", 
+            "registry": "org.apache.cordova.file",
+            "add": true 
+        },
+        { 
+            "name": "geolocation", 
+            "registry": "org.apache.cordova.geolocation",
+            "add": true 
+        },
+        { 
+            "name": "globalization", 
+            "registry": "org.apache.cordova.globalization",
+            "add": true 
+        },
+        { 
+            "name": "inappbrowser",
+            "registry": "org.apache.cordova.inappbrowser", 
+            "add": true 
+        },
+        { 
+            "name": "media", 
+            "registry": "org.apache.cordova.media", 
+            "add": true 
+        },
+        { 
+            "name": "media-capture", 
+            "registry": "org.apache.cordova.media-capture", 
+            "add": true 
+        },
+        { 
+            "name": "network-information", 
+            "registry": "org.apache.cordova.network-information", 
+            "add": true 
+        },
+        { 
+            "name": "splashscreen", 
+            "registry": "org.apache.cordova.splashscreen", 
+            "add": true 
+        },
+        { 
+            "name": "vibration", 
+            "registry": "org.apache.cordova.vibration", 
+            "add": true 
+        }
+    ]
+}
