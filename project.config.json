@@ -10,7 +10,7 @@
 	"environmental_configuration": {
 		"development": "./config/dev/dev.js",
 		"staging": "./config/staging/staging.js",
-		"production": "./config/prod/prod.js",
+		"production": "./config/prod/prod.js"
 	},
 	"paths": {
 		"source": "./app/",
@@ -72,6 +72,6 @@
 			"./bower_components/ember/ember.prod.js",
 			"./bower_components/ember-model/ember-model.js",
 			"./bower_components/ember-animate/ember-animate.js"
-		],
+		]
 	}
 }
