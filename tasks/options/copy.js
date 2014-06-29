@@ -128,5 +128,20 @@ module.exports = {
 		src: ['**'], 
 		dest: '<%= paths.outputDir %>/<%= theme %>/<%= paths.production %>/<%= paths.assets %>',
 		cwd: '<%= paths.source %>/<%= paths.assets %>/'
+	},
+
+	assets_ios_development: {
+		expand: true, 
+		src: ['**'], 
+		dest: '<%= paths.temporary %>/<%= theme %>/ios/<%= paths.development %>/<%= paths.assests %>',
+		cwd: '<%= paths.source %>/<%= paths.assets %>/'
+	},
+
+
+	assets_android_development: {
+		expand: true, 
+		src: ['**'], 
+		dest: '<%= paths.temporary %>/<%= theme %>/android/<%= paths.development %>/<%= paths.assests %>',
+		cwd: '<%= paths.source %>/<%= paths.assets %>/'
 	}
 }

@@ -17,7 +17,23 @@ module.exports = {
         }
 
     },
+    android_development : {
 
+        src : '<%= paths.source %>/index.html',
+        dest : 'cordova/www/index.html',
+        options : {
+
+            context : {
+                name : '<%= pkg.name %>',
+                version : '<%= pkg.version %>',
+                now : '<%= now %>',
+                ver : '<%= ver %>',
+                testVersion: 'false'
+            }
+
+        }
+
+    },
     test : {
 
         src : '<%= paths.source %>/index.html',

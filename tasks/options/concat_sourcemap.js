@@ -14,7 +14,36 @@ module.exports = {
 			]
 		},
 	},
-
+	android_development: {
+		options: {
+			sourcesContent: true
+		},
+		files: {
+			'./cordova/www/js/app.js': [
+				'<%= vendorLibs.development %>',
+				'<%= environmental_configuration.development %>',
+				'<%= libs.development %>',
+				'<%= emberhandlebars.compile.dest %>',
+				'<%= paths.temporary %>/transpiled/**/*.js',
+				'!<%= paths.temporary %>/transpiled/tests/**/*.js'
+			]
+		},
+	},
+	ios_development: {
+		options: {
+			sourcesContent: true
+		},
+		files: {
+			'./cordova/www/js/app.js': [
+				'<%= vendorLibs.development %>',
+				'<%= environmental_configuration.development %>',
+				'<%= libs.development %>',
+				'<%= emberhandlebars.compile.dest %>',
+				'<%= paths.temporary %>/transpiled/**/*.js',
+				'!<%= paths.temporary %>/transpiled/tests/**/*.js'
+			]
+		},
+	},
 	test: {
 		options: {
 			sourcesContent: true

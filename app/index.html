@@ -2,7 +2,6 @@
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<!-- @if NODE_ENV == 'DEVELOPMENT' -->
         <title><!-- @echo name --> - Development Edition</title>
@@ -16,14 +15,28 @@
         <title><!-- @echo name --></title>
 		<!-- @endif -->
 
+        <!-- @if PLATFORM == 'WEB' -->
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- @endif -->
+
+
+        <!-- @if PLATFORM != 'WEB' -->
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- @endif -->
 
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
         <!--SOF STYLESHEETS -->
         <link rel="stylesheet" href="css/index.css">
         <!--EOF STYLESHEETS -->
+
+        <!-- @if PLATFORM != 'WEB' -->
+        <link rel="stylesheet" href="css/index.css">
+        <!-- @endif -->
 
         <!--SOF Head JS -->
         	<!-- If Modrnizr is required uncomment-->
@@ -66,10 +79,24 @@
 
 
         <!--SOF Application JS -->
+        
+        <!-- @if PLATFORM != 'WEB' -->
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+        <!-- @endif -->
+        
 
         <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+
+            
         <script src="js/app.js"></script>
         <script src="//localhost:9008/livereload.js"></script>
+            
         <!-- @endif -->
 
 
@@ -84,10 +111,12 @@
         <!-- @if testVersion == 'true' -->
         <script src="/testem.js"></script>
         <!-- @endif -->
-
+        
         <script>
             window.App = require('pods/app')["default"].create();
         </script>
+        
+
 		<!--EOF Application JS -->
 
 		<!-- @if testVersion == 'true' -->

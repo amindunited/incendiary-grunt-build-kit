@@ -13,6 +13,19 @@ module.exports = {
 			"<%= paths.outputDir %>/<%= theme %>/<%= paths.development %>/css/index.css": ["<%= stylesheets.common %>", "<%= paths.source %>**/*.css", "<%= paths.source %>/less/<%= theme %>/style.less"]
 		}
 	},
+	android_development: {
+		options: {
+			paths: ["<%= paths.source %>/less/<%= theme %>/"],
+			sourceMap: true,
+			sourceMapFilename: './cordova/www/css/app.css.map',
+			sourceMapURL: 'app.css.map',
+			sourceMapRootpath: '',
+			outputSourceFiles: true
+		},
+		files: {
+			"./cordova/www/css/app.css": ["<%= stylesheets.common %>", "<%= paths.source %>**/*.css", "<%= paths.source %>/less/<%= theme %>/style.less"]
+		}
+	},
 	test: {
 		options: {
 			paths: ["<%= paths.temporary %>/tests/css/"],
