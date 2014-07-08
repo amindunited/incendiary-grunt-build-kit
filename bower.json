@@ -5,7 +5,8 @@
     "jquery": "1.9.1",
     "handlebars": "1.2.1",
     "ember": "1.5.0",
-    "ember-model": "git://github.com/ebryn/ember-model.git#0.0.11"
+    "ember-model": "git://github.com/ebryn/ember-model.git#0.0.11",
+    "ember-qunit": "~0.1.8"
   },
   "devDependencies": {
     "qunit": "~1.14.0",

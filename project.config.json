@@ -46,9 +46,10 @@
 			"./lib/animation-helpers.js"
 		],
 		"testing": [
+			"./lib/ember-shim.js",
 			"./bower_components/qunit/qunit/qunit.js",
-			"./lib/test-helpers.js",
-			"./lib/test-loader.js"
+			"./lib/qunit-shim.js",
+			"./bower_components/ember-qunit/dist/named-amd/**.js"
 		]
 	},
 	"vendorLibs": {

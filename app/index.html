@@ -111,11 +111,12 @@
         <!-- @if testVersion == 'true' -->
         <script src="/testem.js"></script>
         <!-- @endif -->
-        
+
+        <!-- @if testVersion != 'true' -->
         <script>
             window.App = require('pods/app')["default"].create();
         </script>
-        
+        <!-- @endif -->
 
 		<!--EOF Application JS -->
 

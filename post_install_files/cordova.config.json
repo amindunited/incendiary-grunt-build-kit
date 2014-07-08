@@ -4,87 +4,87 @@
         { 
             "name": "battery-status",
             "registry": "org.apache.cordova.battery-status",
-            "add": true 
+            "add": false 
         },
         { 
             "name": "camera",
             "registry": "org.apache.cordova.camera", 
-            "add": true 
+            "add": false 
         },
         { 
             "name": "console",
             "registry": "org.apache.cordova.console", 
-            "add": true
+            "add": false
         },
         { 
             "name": "contacts",
             "registry": "org.apache.cordova.contacts", 
-            "add": true 
+            "add": false 
         },
         { 
             "name": "device",
             "registry": "org.apache.cordova.device",
-            "add": true 
+            "add": false 
         },
         { 
             "name": "device-motion", 
             "registry": "org.apache.cordova.device-motion",
-            "add": true 
+            "add": false 
         },
         { 
             "name": "device-orientation", 
             "registry": "org.apache.cordova.device-orientation",
-            "add": true 
+            "add": false 
         },
         { 
             "name": "dialogs", 
             "registry": "org.apache.cordova.dialogs",
-            "add": true 
+            "add": false 
         },
         { 
             "name": "file", 
             "registry": "org.apache.cordova.file",
-            "add": true 
+            "add": false 
         },
         { 
             "name": "geolocation", 
             "registry": "org.apache.cordova.geolocation",
-            "add": true 
+            "add": false 
         },
         { 
             "name": "globalization", 
             "registry": "org.apache.cordova.globalization",
-            "add": true 
+            "add": false 
         },
         { 
             "name": "inappbrowser",
             "registry": "org.apache.cordova.inappbrowser", 
-            "add": true 
+            "add": false 
         },
         { 
             "name": "media", 
             "registry": "org.apache.cordova.media", 
-            "add": true 
+            "add": false 
         },
         { 
             "name": "media-capture", 
             "registry": "org.apache.cordova.media-capture", 
-            "add": true 
+            "add": false 
         },
         { 
             "name": "network-information", 
             "registry": "org.apache.cordova.network-information", 
-            "add": true 
+            "add": false 
         },
         { 
             "name": "splashscreen", 
             "registry": "org.apache.cordova.splashscreen", 
-            "add": true 
+            "add": false 
         },
         { 
             "name": "vibration", 
             "registry": "org.apache.cordova.vibration", 
-            "add": true 
+            "add": false 
         }
     ]
 }

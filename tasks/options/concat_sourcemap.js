@@ -54,10 +54,14 @@ module.exports = {
 			    '<%= environmental_configuration.development %>',
 				'<%= libs.development %>',
 				'<%= emberhandlebars.compile.dest %>',
-				'<%= paths.temporary %>/transpiled/**/*.js'
+				'<%= paths.temporary %>/transpiled/app/**/*.js'
 			],
 			'<%= paths.temporary %>/tests/js/tests.js': [
-				'<%=libs.testing %>'
+				'<%=libs.testing %>',
+				'<%= paths.temporary %>/transpiled/tests/**/*.js',
+				'lib/test-helpers.js',
+				'lib/test-loader.js'
+				
 			]
 		},
 	},
