@@ -2,7 +2,7 @@ import App from 'pods/app';
 import Router from 'pods/router';
 
 function startApp(attrs) {
-  //var App;
+  var Application;
 
   var attributes = Ember.merge({
     // useful Test defaults
@@ -16,15 +16,15 @@ function startApp(attrs) {
   });
 
   Ember.run(function(){
-    App = App.create(attributes);
-    App.setupForTesting();
-    App.injectTestHelpers();
+    Application = App.create(attributes);
+    Application.setupForTesting();
+    Application.injectTestHelpers();
     console.log('in the start app run ', App);
   });
 
-  App.reset(); // this shouldn't be needed, i want to be able to "start an app at a specific URL"
+  Application.reset(); // this shouldn't be needed, i want to be able to "start an app at a specific URL"
 
-  return App;
+  return Application;
 }
 
 export default startApp;
