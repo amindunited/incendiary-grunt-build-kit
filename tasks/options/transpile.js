@@ -24,7 +24,7 @@ module.exports = {
 			{
 				expand: true,
 				cwd: 'app',//Setting this to <%= paths.src %> creates module naming issues
-				src: ['**/*.js', '!<%= paths.config %>', '!*/templates/**/*'],
+				src: ['**/*.js', '!<%= paths.config %>', '!**templates/**', '!**helpers/**'],
 				dest: '<%= paths.temporary %>/transpiled/app',
 				modPath: '<%= paths.ember_modules %>'
 			}
