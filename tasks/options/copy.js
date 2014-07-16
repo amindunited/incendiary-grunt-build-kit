@@ -114,7 +114,7 @@ module.exports = {
 	assets_development: {
 		expand: true, 
 		src: ['**'], 
-		dest: '<%= paths.outputDir %>/<%= theme %>/<%= paths.development %>/<%= paths.assests %>',
+		dest: '<%= paths.outputDir %>/<%= theme %>/<%= paths.development %>/<%= paths.assets %>',
 		cwd: '<%= paths.source %>/<%= paths.assets %>/'
 	},
 	assets_staging: {
@@ -133,7 +133,7 @@ module.exports = {
 	assets_ios_development: {
 		expand: true, 
 		src: ['**'], 
-		dest: '<%= paths.temporary %>/<%= theme %>/ios/<%= paths.development %>/<%= paths.assests %>',
+		dest: '<%= paths.temporary %>/<%= theme %>/ios/<%= paths.development %>/<%= paths.assets %>',
 		cwd: '<%= paths.source %>/<%= paths.assets %>/'
 	},
 
@@ -141,7 +141,7 @@ module.exports = {
 	assets_android_development: {
 		expand: true, 
 		src: ['**'], 
-		dest: '<%= paths.temporary %>/<%= theme %>/android/<%= paths.development %>/<%= paths.assests %>',
+		dest: '<%= paths.temporary %>/<%= theme %>/android/<%= paths.development %>/<%= paths.assets %>',
 		cwd: '<%= paths.source %>/<%= paths.assets %>/'
 	}
 }
