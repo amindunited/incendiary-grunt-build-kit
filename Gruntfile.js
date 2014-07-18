@@ -5,6 +5,9 @@
  */
 module.exports = function(grunt) {
 
+	//Report task run times, comment out to disable
+	require('time-grunt')(grunt);
+
 	/* 
 	 * Instead of grunt.loadNpmTasks('...'); over and over...
 	 * 

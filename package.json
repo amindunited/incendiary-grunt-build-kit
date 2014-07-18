@@ -35,7 +35,8 @@
     "testem": "^0.6.15",
     "grunt-contrib-testem": "^0.5.16",
     "clean-css": "^2.1.8",
-    "grunt-shell": "^0.7.0"
+    "grunt-shell": "^0.7.0",
+    "time-grunt": "^0.4.0"
   },
   "dependencies": {
     "grunt-contrib-yuidoc": "^0.5.2",
