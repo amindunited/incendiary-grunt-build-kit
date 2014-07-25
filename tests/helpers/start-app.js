@@ -19,7 +19,6 @@ function startApp(attrs) {
     Application = App.create(attributes);
     Application.setupForTesting();
     Application.injectTestHelpers();
-    console.log('in the start app run ', App);
   });
 
   Application.reset(); // this shouldn't be needed, i want to be able to "start an app at a specific URL"
