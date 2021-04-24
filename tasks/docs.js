@@ -1,3 +1,3 @@
 module.exports = function(grunt) {
-	grunt.registerTask('docs', []);
+	grunt.registerTask('docs', ['yuidoc']);
 };
